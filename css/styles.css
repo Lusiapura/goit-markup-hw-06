@@ -349,13 +349,6 @@ svg {
 .section:nth-child(2) {
   padding-bottom: 0px;
 }
-/*.section:nth-child(n + 3) {
-  padding-bottom: 94px;
-}
-
-.section:last-child {
-  padding-bottom: 94px;
-}*/
 
 .button {
   display: inline-block;
@@ -763,7 +756,9 @@ svg {
 }
 
 .button-modal {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -790,8 +785,8 @@ svg {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  margin-top: 2px;
   margin-bottom: 12px;
+  margin-top: 0;
 }
 
 .form-field {
@@ -803,10 +798,9 @@ svg {
 
 .label-field {
   position: relative;
-
   font-family: inherit;
   font-size: 12px;
-  line-height: 1.71;
+  line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--title-text-color);
 }
@@ -867,7 +861,7 @@ svg {
 }
 
 .label-check {
-  display: block;
+  display: flex;
   align-items: center;
   font-family: inherit;
   font-size: 14px;
@@ -875,10 +869,9 @@ svg {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-text-color);
-  padding: 0;
+  padding-left: 36px;
   margin-top: 20px;
   margin-bottom: 30px;
-  align-items: center;
 }
 
 .check-field-contract {
@@ -886,14 +879,43 @@ svg {
 }
 
 .check-field {
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon-box {
+  display: block;
+  position: absolute;
+  margin-left: -24px;
+  fill: var(--primary-text-color);
+}
+
+.check-field:checked + .icon-box {
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.check-field:focus + .icon-box {
+  outline: 1px solid var(--accent-color);
 }
 
 .button-submit {
+  display: block;
   width: 200px;
   height: 50px;
-  margin-left: 124px;
-  margin-right: 124px;
-  margin-bottom: 40px;
+  margin: 0 auto;
   padding: 10px 55px;
   color: var(--white-color);
   background-color: var(--accent-color);
