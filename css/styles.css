@@ -907,11 +907,12 @@ svg {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
   outline: 1px solid var(--accent-color);
+  fill: var(--accent-color);
 }
 
-/*.check-field:focus + .icon-box {
+.check-field:focus + .icon-box {
   outline: 1px solid var(--accent-color);
-}*/
+}
 
 .button-submit {
   display: block;
