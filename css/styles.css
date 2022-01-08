@@ -891,25 +891,27 @@ svg {
 }
 
 .icon-box {
-  display: block;
+  display: inline-block;
   position: absolute;
   margin-left: -24px;
-  fill: var(--primary-text-color);
+  width: 16px;
+  height: 15px;
 }
 
 .check-field:checked + .icon-box {
-  background-image: url(../images/icon-check.svg);
+  background-image: url('../images/icon-check.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-origin: border-box;
   border-color: var(--accent-color);
   background-color: var(--accent-color);
-}
-
-.check-field:focus + .icon-box {
   outline: 1px solid var(--accent-color);
 }
+
+/*.check-field:focus + .icon-box {
+  outline: 1px solid var(--accent-color);
+}*/
 
 .button-submit {
   display: block;
